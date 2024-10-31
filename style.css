@@ -1,0 +1,124 @@
+/* Global Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f9fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Task Form */
+#taskForm {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+#taskForm input,
+#taskForm select {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: calc(50% - 0.5rem);
+}
+
+#taskForm .add-btn {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: calc(50% - 0.5rem);
+    transition: background-color 0.2s;
+}
+
+#taskForm .add-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Task List */
+#taskList {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.task-item {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s;
+}
+
+.task-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.task-item .completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Task Item Priority Colors */
+.task-item.high { border-left: 5px solid #ff4d4d; }
+.task-item.medium { border-left: 5px solid #ffa500; }
+.task-item.low { border-left: 5px solid #28a745; }
+
+/* Task Item Controls */
+.task-item .task-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.task-item .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.task-item .btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.task-item .btn.complete-btn { color: #28a745; }
+.task-item .btn.edit-btn { color: #007bff; }
+.task-item .btn.delete-btn { color: #ff4d4d; }
+
